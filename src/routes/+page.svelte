@@ -1,12 +1,13 @@
 <script lang="ts">
   import ThreePaneLayout from '$lib/layout/ThreePaneLayout.svelte';
   import WorkspaceOpener from '$lib/workspace/WorkspaceOpener.svelte';
+  import FileTreeView from '$lib/filetree/FileTreeView.svelte';
 </script>
 
 <ThreePaneLayout>
   {#snippet left()}
     <WorkspaceOpener />
-    <div class="placeholder">file tree (Task 6)</div>
+    <FileTreeView />
   {/snippet}
   {#snippet center()}
     <div class="placeholder">terminal (Task 8)</div>
