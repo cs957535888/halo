@@ -2,6 +2,7 @@
   import ThreePaneLayout from '$lib/layout/ThreePaneLayout.svelte';
   import WorkspaceOpener from '$lib/workspace/WorkspaceOpener.svelte';
   import FileTreeView from '$lib/filetree/FileTreeView.svelte';
+  import TerminalView from '$lib/terminal/TerminalView.svelte';
 </script>
 
 <ThreePaneLayout>
@@ -10,7 +11,7 @@
     <FileTreeView />
   {/snippet}
   {#snippet center()}
-    <div class="placeholder">terminal (Task 8)</div>
+    <TerminalView />
   {/snippet}
   {#snippet right()}
     <div class="placeholder">context panel (Task 9)</div>
