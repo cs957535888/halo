@@ -81,4 +81,18 @@ mod tests {
         let res = list_dir("/definitely/not/here");
         assert!(matches!(res, Err(ListDirError::NotADirectory(_))));
     }
+
+    #[test]
+    fn serializes_is_dir_as_camelcase_isdir() {
+        // Locks the FE/BE contract: TypeScript code reads `node.isDir`,
+        // not `node.is_dir`. If this assertion fails, the file tree UI breaks.
+        let n = FileNode {
+            name: "x".into(),
+            path: "/x".into(),
+            is_dir: true,
+        };
+        let s = serde_json::to_string(&n).unwrap();
+        assert!(s.contains("\"isDir\":true"), "expected camelCase isDir in {s}");
+        assert!(!s.contains("is_dir"), "snake_case is_dir leaked: {s}");
+    }
 }

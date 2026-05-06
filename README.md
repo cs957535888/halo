@@ -2,7 +2,9 @@
 
 A 2026 AI terminal that makes every AI-driven side effect visible.
 
-Status: M1 in progress (basic terminal foundation).
+Status: **M1 complete (v0.1 alpha)** — basic terminal foundation. Three-pane layout (file tree / xterm.js terminal / Context Panel placeholder), workspace open via Tauri dialog, cross-platform CI matrix.
+
+Roadmap: M2 adds the Operation Observer + first three Visualizers (FileEdit / ShellExec / SshSession). M3 adds the rest of the Visualizers + Approval Prompt UI. M4 is cross-platform polish + auto-updater + beta release.
 
 ## Stack
 
