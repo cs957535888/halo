@@ -58,3 +58,9 @@ jobs:
       - name: Cargo build (verifies Tauri compiles per OS)
         working-directory: src-tauri
         run: cargo build --release
+
+      - name: Playwright E2E (Linux only — frontend SPA, no Tauri runtime)
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          pnpm exec playwright install --with-deps chromium
+          pnpm test:e2e
