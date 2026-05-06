@@ -3,6 +3,7 @@
   import WorkspaceOpener from '$lib/workspace/WorkspaceOpener.svelte';
   import FileTreeView from '$lib/filetree/FileTreeView.svelte';
   import TerminalView from '$lib/terminal/TerminalView.svelte';
+  import EmptyContextPanel from '$lib/contextpanel/EmptyContextPanel.svelte';
 </script>
 
 <ThreePaneLayout>
@@ -14,14 +15,6 @@
     <TerminalView />
   {/snippet}
   {#snippet right()}
-    <div class="placeholder">context panel (Task 9)</div>
+    <EmptyContextPanel />
   {/snippet}
 </ThreePaneLayout>
-
-<style>
-  .placeholder {
-    padding: 12px;
-    color: var(--fg-2);
-    font-size: 12px;
-  }
-</style>
