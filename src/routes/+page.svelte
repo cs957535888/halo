@@ -1,16 +1,18 @@
 <script lang="ts">
   import ThreePaneLayout from '$lib/layout/ThreePaneLayout.svelte';
+  import WorkspaceOpener from '$lib/workspace/WorkspaceOpener.svelte';
 </script>
 
 <ThreePaneLayout>
   {#snippet left()}
-    <div class="placeholder">Left (file tree)</div>
+    <WorkspaceOpener />
+    <div class="placeholder">file tree (Task 6)</div>
   {/snippet}
   {#snippet center()}
-    <div class="placeholder">Center (terminal)</div>
+    <div class="placeholder">terminal (Task 8)</div>
   {/snippet}
   {#snippet right()}
-    <div class="placeholder">Right (context panel)</div>
+    <div class="placeholder">context panel (Task 9)</div>
   {/snippet}
 </ThreePaneLayout>
 
